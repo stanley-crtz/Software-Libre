@@ -1,4 +1,4 @@
-import MembersScheme from "../Models/Members";
+import MembersScheme from "../Models/Members.js";
 
 const AppController = {
 
