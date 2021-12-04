@@ -10,7 +10,7 @@ form.addEventListener('submit', e => {
             "Content-Type": "application/json"
         },
         method: 'POST',
-        body: JSON.stringify({member})
+        body: JSON.stringify({ member })
     })
         .then(() => window.location = '/')
 })
