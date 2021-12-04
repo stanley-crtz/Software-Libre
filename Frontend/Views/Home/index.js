@@ -3,6 +3,7 @@
     fetch('/api/getMembers')
         .then(resp => resp.json())
         .then(({ members }) => {
+            console.log(members)
             let resp = ''
             members.forEach(element => {
                 resp += `
