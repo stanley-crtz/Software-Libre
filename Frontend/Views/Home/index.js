@@ -8,7 +8,7 @@
             members.forEach(element => {
                 resp += `
                     <div class="alert alert-dismissible alert-primary m-2">
-                        ${element}
+                        ${element.member}
                     </div>
                 `
             });

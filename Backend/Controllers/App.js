@@ -6,6 +6,7 @@ const AppController = {
 
         MembersScheme.find((err, members) => {
             if (err) {
+                console.log(err)
                 return res.status(400).send({ err });
             }
 
