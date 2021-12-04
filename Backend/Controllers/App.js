@@ -15,7 +15,7 @@ const AppController = {
     },
     setMember: ({ body }, res) => {
 
-        const saveMember = new MembersScheme(element);
+        const saveMember = new MembersScheme(body);
 
         saveMember.save(
             (err) => {
