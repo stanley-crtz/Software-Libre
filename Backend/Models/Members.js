@@ -1,6 +1,6 @@
-import { Schema, model } from 'mongoose'
+import Mongo from 'mongoose'
 
-const MembersScheme = model('members', new Schema({
+const MembersScheme = Mongo.model('members', new Mongo.Schema({
     name: {
         type: String,
         required: [true, "Ingrese un nombre"],
