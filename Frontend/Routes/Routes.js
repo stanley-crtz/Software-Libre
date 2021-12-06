@@ -1,16 +1,16 @@
 import Express from 'express';
 import SearchFiles from '../Class/SearchFiles.js';
 
-const Routes = Express.Router();
+const Route = Express.Router();
 
-Routes.get(
+Route.get(
     '/',
     (req, res) => res.sendFile(
         SearchFiles.__Views('Home', 'index.html')
     )
 )
 
-Routes.get(
+Route.get(
     '/registro',
     (req, res) => res.sendFile(
         SearchFiles.__Views('Register', 'index.html')
@@ -19,4 +19,4 @@ Routes.get(
 
 
 
-export default Routes;
+export default Route;
