@@ -4,12 +4,12 @@ import bodyParser from 'body-parser';
 import RoutesBackend from './Backend/Routes/Routes.js';
 import Routes from './Frontend/Routes/Routes.js';
 
-const App = Express();
+const app = Express();
 
-App.use(bodyParser.urlencoded({extended:true}));
-App.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
 
-App.use((req, res, next) => {
+app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
@@ -17,10 +17,10 @@ App.use((req, res, next) => {
     next();
 });
 
-App.use('/', Routes);
+app.use('/', Routes);
 
-App.use('/api/', RoutesBackend);
+app.use('/api/', RoutesBackend);
 
-App.use(Express.static(Path.join(Path.resolve(), 'Frontend', 'Views')));
+app.use(Express.static(Path.join(Path.resolve(), 'Frontend', 'Views')));
 
-export default App;
+export default app;
