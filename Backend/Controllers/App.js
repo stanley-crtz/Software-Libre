@@ -1,10 +1,10 @@
-import MembersScheme from "../Models/Members.js";
+import miembros from "../Models/Members.js";
 
 const AppController = {
 
     getUsers: (req, res) => {
 
-        MembersScheme.find((err, members) => {
+        miembros.find((err, members) => {
             if (err) {
                 console.log(err)
                 return res.status(400).send({ err });
@@ -16,7 +16,7 @@ const AppController = {
     },
     setMember: ({ body }, res) => {
 
-        const saveMember = new MembersScheme(body);
+        const saveMember = new miembros(body);
 
         saveMember.save(
             (err) => {
